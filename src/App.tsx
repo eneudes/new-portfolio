@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="grid grid-cols-[300px_1fr] h-screen">
+      <div className="bg-gray-800 w-full border-r border-gray-500 flex flex-col justify-between">
+       <div className="h-64 border-b border-gray-500 flex items-center justify-center">
+        <img src="#" alt="foto perfil" className="w-52 h-52 rounded-full bg-gray-400 flex" />
+       </div>
+       <nav className="m-1">
+          <ul>
+            <li><a href="/home" className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block  ">home</a></li>
+            <li><a href="/ssss" className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block transition-colors">sobre</a></li>
+            <li><a href="#" className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block transition-colors">resumo</a></li>
+            <li><a href="#" className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block transition-colors">blogs</a></li>
+            <li><a href="#" className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block transition-colors">contato</a></li>
+          </ul>
+       </nav>
+       <footer className="flex justify-center p-2 border-t border-gray-500 h-12">
+        <span>©copyrigt eneudes matos-dev</span>
+       </footer>
+      
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <main className="bg-gray-900 w-full">
+
+      </main>
+    </div>
   )
 }
-
-export default App
