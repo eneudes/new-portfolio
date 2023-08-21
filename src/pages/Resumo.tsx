@@ -1,5 +1,5 @@
 export function Resumo(){
   return(
-    <h1>Resumo</h1>
+    <h1>resume</h1>
   )
 }
