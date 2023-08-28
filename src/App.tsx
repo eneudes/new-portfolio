@@ -1,31 +1,45 @@
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Router } from "./Router";
-import perfil from './assets/perfil.svg'
+import perfil from "./assets/perfil.svg";
 
 export function App() {
   return (
-    <div className="grid grid-cols-[300px_1fr] h-screen">
-      <div className="bg-gray-800  border-r border-gray-500 flex flex-col justify-between">
-       <div className="h-64 border-b border-gray-500 flex items-center justify-center">
-        <Link to={'/'} ><img src={perfil} alt="Eneudes matos" className="w-56 h-56 rounded-full bg-gray-400 flex border-[2px] border-[#2e344e]" /></Link>
-       </div>
-       <nav className="m-1">
-          <ul>
-            <li><Link to={'/'} className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block  ">home</Link></li>
-            <li><Link to={'/sobre'} className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block transition-colors">sobre</Link></li>
-            <li><Link to={'/resumo'} className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block transition-colors">resumo</Link></li>
-            <li><Link to={'/blogs'} className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block transition-colors">blogs</Link></li>
-            <li><Link to={'/contato'} className="visited:bg-blue-300 hover:bg-blue-300 h-10 text-center uppercase p-2 font-normal block transition-colors">contato</Link></li>
-          </ul>
-       </nav>
-       <footer className="flex justify-center items-center p-2 border-t border-gray-500 h-12">
-        <span className="text-sm">©2023 EneudesMatos-dev</span>
-       </footer>
-      </div>
-      <div className="bg-gray-900 w-full h-[700px] scroll-auto">
+    <div className="container m-auto h-screen p-4 bg-red-200 " >
+      <div className=" bg-[#20202a] shadow-lg shadow-zinc-700 w-72 h-[calc(100vh-30px)] fixed ">
+        <nav className="p-7 bg-slate-800">
+          <header className="h-48 flex-col flex items-center bg-[rgba(35, 35, 45, 0.98) 100%)] shadow-zinc-800 shadow ">
+          <Link to={'/'} className="w-24 h-24 rounded-full block ">
+            <img src={perfil} alt="" className="rounded-full"/>
+          </Link>
+          <h1 className="font-bold text-base pt-4">Eneudes Matos</h1>
+          <p className="font-normal text-sm">Front end developer</p>
+          </header>
+          <div className="py-8 border-b border-zinc-400">
+            <ul >
+              <li className="flex justify-between font-normal text-sm pb-1"><h6>País:</h6><p>Brasil</p></li>
+              <li className="flex justify-between font-normal text-sm pb-1"><h6>Cidade:</h6><p>Macapá</p></li>
+              <li className="flex justify-between font-normal text-sm pb-1"><h6>Idade:</h6><p>33</p></li>
+            </ul>
+          </div>
       
-        <Router/>
+          <div className=" py-8 border-b border-zinc-400 flex gap-2 ">
+            <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="w-14 h-14 bg-zinc-800 rounded-full text-center">
+                <span>100%</span>
+              </div>
+            </div>
+            <div className="w-20 h-20 bg-green-500 rounded-full"></div>
+            <div className="w-20 h-20 bg-green-500 rounded-full"></div>
+          </div>
+        </nav>
       </div>
+
+
+      <main className="bg-green-200 flex flex-col h-[calc(100vh-30px)] ml-[300px] w-[calc(100%-300px)] scroll-smooth ">
+       <div className="w-12 bg-slate-500 h-[1300px]"></div>
+       <div className="w-12 bg-green-500 h-[1300px]"></div>
+      </main>
+      
     </div>
-  )
+  );
 }

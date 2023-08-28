@@ -3,5 +3,8 @@
 @tailwind utilities;
  
 body{
-  @apply bg-zinc-900 text-zinc-100; font-family: 'Nunito', sans-serif;
+  @apply text-zinc-100; font-family: 'Nunito', sans-serif;
+}
+.tamanho{
+  width: calc(100% - 300px);
 }
