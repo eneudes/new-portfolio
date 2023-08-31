@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import { Router } from "./Router";
 import perfil from "./assets/perfil.svg";
 
 export function App() {
   return (
-    <div className="container m-auto h-screen p-4 bg-red-200 " >
+    <div className="container m-auto h-screen p-4 bg-red-200 rounded-md" >
       <div className=" bg-[#20202a] shadow-lg shadow-zinc-700 w-72 h-[calc(100vh-30px)] fixed ">
         <nav className="p-7 bg-slate-800">
           <header className="h-48 flex-col flex items-center bg-[rgba(35, 35, 45, 0.98) 100%)] shadow-zinc-800 shadow ">
@@ -35,9 +34,11 @@ export function App() {
       </div>
 
 
-      <main className="bg-green-200 flex flex-col h-[calc(100vh-30px)] ml-[300px] w-[calc(100%-300px)] scroll-smooth ">
-       <div className="w-12 bg-slate-500 h-[1300px]"></div>
-       <div className="w-12 bg-green-500 h-[1300px]"></div>
+      <main className="bg-green-200 h-[calc(100vh-30px)] ml-[300px] w-[calc(100%-300px)] overflow-hidden ">
+        <div className="p-5 h-[calc(100vh-30px)] overflow-y-auto">
+            <div className=" bg-slate-500 h-[800px]"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni non ut adipisci recusandae, illum veniam voluptatum architecto reiciendis quisquam, est repellat, cum maiores? Dolores quibusdam amet, natus asperiores tempore dolor.</div>
+            <div className="w-full bg-green-500 h-[800px]"></div>
+        </div>
       </main>
       
     </div>

@@ -3,8 +3,9 @@
 @tailwind utilities;
  
 body{
-  @apply text-zinc-100; font-family: 'Nunito', sans-serif;
+  @apply text-zinc-100 min-h-full bg-slate-400 ; 
+  font-family: 'Nunito', sans-serif; 
 }
-.tamanho{
-  width: calc(100% - 300px);
+::-webkit-scrollbar{
+  width: 0%;
 }
